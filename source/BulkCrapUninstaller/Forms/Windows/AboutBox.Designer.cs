@@ -46,6 +46,7 @@ namespace BulkCrapUninstaller.Forms
             this.panel5 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
@@ -60,8 +61,6 @@ namespace BulkCrapUninstaller.Forms
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.usageTracker1 = new BulkCrapUninstaller.Functions.Tracking.UsageTracker();
-            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -165,6 +164,13 @@ namespace BulkCrapUninstaller.Forms
             this.linkLabel6.TabStop = true;
             this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
+            // linkLabel9
+            // 
+            resources.ApplyResources(this.linkLabel9, "linkLabel9");
+            this.linkLabel9.Name = "linkLabel9";
+            this.linkLabel9.TabStop = true;
+            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
+            // 
             // linkLabel3
             // 
             resources.ApplyResources(this.linkLabel3, "linkLabel3");
@@ -265,17 +271,6 @@ namespace BulkCrapUninstaller.Forms
             // 
             resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            // 
-            // usageTracker1
-            // 
-            this.usageTracker1.ContainerControl = this;
-            // 
-            // linkLabel9
-            // 
-            resources.ApplyResources(this.linkLabel9, "linkLabel9");
-            this.linkLabel9.Name = "linkLabel9";
-            this.linkLabel9.TabStop = true;
-            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
             // 
             // AboutBox
             // 

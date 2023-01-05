@@ -10,6 +10,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 using BulkCrapUninstaller.Properties;
+using BulkCrapUninstaller.Themes;
 using Klocman.Extensions;
 using Klocman.Forms.Tools;
 using Klocman.Tools;
@@ -21,6 +22,8 @@ namespace BulkCrapUninstaller.Forms
         public AboutBox()
         {
             InitializeComponent();
+            this.SetTheme();
+
             labelVersion.Text += AssemblyVersion;
             labelCopyright.Text = AssemblyCopyright;
             labelCompanyName.Text = AssemblyCompany;
