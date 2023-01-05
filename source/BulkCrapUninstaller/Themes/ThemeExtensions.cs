@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Klocman.Extensions;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
@@ -12,9 +15,17 @@ namespace BulkCrapUninstaller.Themes
             form.BackColor = ThemeManager.CurrentTheme.Background;
             form.ForeColor = ThemeManager.CurrentTheme.Text;
 
-            foreach (Control child in form.GetDescendants())
+            var children = form.GetAllChildren();
+
+            foreach (Control child in children)
             {
                 child.SetTheme();
+
+                if (child.GetType() == typeof(MenuStrip))
+                {
+                    var menuStrip = (MenuStrip)child;
+                    menuStrip.SetDropdownTheme();
+                }
             }
         }
 
@@ -34,12 +45,28 @@ namespace BulkCrapUninstaller.Themes
                 var label = (LinkLabel)control;
                 label.LinkColor = ThemeManager.CurrentTheme.Link;
             }
+
+            if (control.GetType() == typeof(Button))
+            {
+                control.BackColor = ThemeManager.CurrentTheme.ButtonBackground;
+            }
         }
 
-        public static IEnumerable<Control> GetDescendants(this Control control)
+        public static void SetTheme(this ToolStripItem control)
         {
-            IEnumerable<Control> children = control.Controls.Cast<Control>();
-            return children.Concat(children.SelectMany(c => GetDescendants(c)));
+            control.BackColor = ThemeManager.CurrentTheme.Background;
+            control.ForeColor = ThemeManager.CurrentTheme.Text;
+        }
+
+        public static void SetDropdownTheme(this MenuStrip menuStrip)
+        {
+            foreach (ToolStripMenuItem strip in menuStrip.Items)
+            {
+                foreach (ToolStripItem dropDownItem in strip.DropDownItems)
+                {
+                    dropDownItem.SetTheme();
+                }
+            }
         }
     }
 }
