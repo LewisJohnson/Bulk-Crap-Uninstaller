@@ -78,7 +78,6 @@ namespace BulkCrapUninstaller.Forms
             Application.DoEvents();
 
             InitializeComponent();
-            this.SetTheme();
 
             // Setup settings
             _setMan = new SettingTools(Settings.Default.SettingBinder, this);
