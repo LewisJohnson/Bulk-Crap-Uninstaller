@@ -3,6 +3,7 @@
     Apache License Version 2.0
 */
 
+using BulkCrapUninstaller.Themes;
 using System;
 using System.Windows.Forms;
 
@@ -13,6 +14,8 @@ namespace BulkCrapUninstaller.Forms
         public FeedbackWindow()
         {
             InitializeComponent();
+            this.SetTheme();
+
             webBrowser.DocumentCompleted += webBrowser_DocumentCompleted;
             webBrowser.ScrollBarsEnabled = false;
             //webBrowser.Visible = false;

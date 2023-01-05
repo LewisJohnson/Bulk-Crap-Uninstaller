@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using BulkCrapUninstaller.Functions.ApplicationList;
+using BulkCrapUninstaller.Themes;
 using Klocman.Forms.Tools;
 
 namespace BulkCrapUninstaller.Controls
@@ -18,6 +19,7 @@ namespace BulkCrapUninstaller.Controls
         public ListLegend()
         {
             InitializeComponent();
+            this.SetTheme();
         }
 
         protected override void OnLoad(EventArgs e)

@@ -4,6 +4,7 @@
 */
 
 using System.Windows.Forms;
+using BulkCrapUninstaller.Themes;
 using Klocman.Binding.Settings;
 
 namespace BulkCrapUninstaller.Controls.Settings
@@ -15,6 +16,7 @@ namespace BulkCrapUninstaller.Controls.Settings
         public CacheSettings()
         {
             InitializeComponent();
+            this.SetTheme();
         }
 
         protected override void OnLoad(System.EventArgs e)

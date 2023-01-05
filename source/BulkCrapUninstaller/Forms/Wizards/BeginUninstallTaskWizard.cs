@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using BulkCrapUninstaller.Functions;
 using BulkCrapUninstaller.Functions.Tools;
 using BulkCrapUninstaller.Properties;
+using BulkCrapUninstaller.Themes;
 using Klocman.Extensions;
 using Klocman.IO;
 using UninstallTools;
@@ -24,6 +25,7 @@ namespace BulkCrapUninstaller.Forms
         public BeginUninstallTaskWizard()
         {
             InitializeComponent();
+            this.SetTheme();
 
             Icon = MessageBoxes.DefaultOwner.Icon;
             DialogResult = DialogResult.Cancel;

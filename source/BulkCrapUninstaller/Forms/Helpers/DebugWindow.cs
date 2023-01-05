@@ -13,6 +13,7 @@ using BulkCrapUninstaller.Functions;
 using BulkCrapUninstaller.Functions.ApplicationList;
 using BulkCrapUninstaller.Functions.Tracking;
 using BulkCrapUninstaller.Properties;
+using BulkCrapUninstaller.Themes;
 using Klocman.Binding.Settings;
 using Klocman.Forms.Tools;
 
@@ -32,6 +33,7 @@ namespace BulkCrapUninstaller.Forms
             _appUninstaller = appUninstaller;
 
             InitializeComponent();
+            this.SetTheme();
 
             if (DesignMode) return;
 

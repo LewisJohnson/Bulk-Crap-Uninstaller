@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
+using BulkCrapUninstaller.Themes;
 using Klocman.Binding.Settings;
 
 namespace BulkCrapUninstaller.Controls
@@ -18,6 +19,7 @@ namespace BulkCrapUninstaller.Controls
         public PropertiesSidebar()
         {
             InitializeComponent();
+            this.SetTheme();
         }
 
         protected override void OnLoad(System.EventArgs e)

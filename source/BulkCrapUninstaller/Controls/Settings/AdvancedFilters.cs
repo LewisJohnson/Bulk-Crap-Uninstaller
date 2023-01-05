@@ -5,6 +5,7 @@
 
 using BulkCrapUninstaller.Functions;
 using BulkCrapUninstaller.Properties;
+using BulkCrapUninstaller.Themes;
 using Klocman.Forms.Tools;
 using System;
 using System.Collections.Generic;
@@ -60,6 +61,7 @@ namespace BulkCrapUninstaller.Controls
         public AdvancedFilters()
         {
             InitializeComponent();
+            this.SetTheme();
         }
 
         protected override void OnLoad(EventArgs e)

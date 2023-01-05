@@ -3,6 +3,7 @@
     Apache License Version 2.0
 */
 
+using BulkCrapUninstaller.Themes;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace BulkCrapUninstaller.Forms
         public RelatedUninstallerAdder()
         {
             InitializeComponent();
+            this.SetTheme();
 
             olvColumnEnabled.AspectGetter = rowObject => ((RelatedApplicationEntry)rowObject).Enabled;
             olvColumnEnabled.AspectPutter = (rowObject, value) => ((RelatedApplicationEntry)rowObject).Enabled = (bool)value;

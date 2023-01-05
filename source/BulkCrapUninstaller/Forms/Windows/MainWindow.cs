@@ -19,6 +19,7 @@ using BulkCrapUninstaller.Functions.ApplicationList;
 using BulkCrapUninstaller.Functions.Tools;
 using BulkCrapUninstaller.Functions.Tracking;
 using BulkCrapUninstaller.Properties;
+using BulkCrapUninstaller.Themes;
 using Klocman.Binding.Settings;
 using Klocman.Events;
 using Klocman.Extensions;
@@ -77,11 +78,15 @@ namespace BulkCrapUninstaller.Forms
             Application.DoEvents();
 
             InitializeComponent();
+            this.SetTheme();
 
             // Setup settings
             _setMan = new SettingTools(Settings.Default.SettingBinder, this);
             _setMan.LoadSettings();
             BindControlsToSettings();
+
+            // Set theme
+            this.SetTheme();
 
             // Finish up setting controls and window, suspend after settings have loaded
             SuspendLayout();

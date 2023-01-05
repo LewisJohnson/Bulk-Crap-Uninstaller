@@ -6,6 +6,7 @@
 using System;
 using System.Windows.Forms;
 using BulkCrapUninstaller.Properties;
+using BulkCrapUninstaller.Themes;
 
 namespace BulkCrapUninstaller.Forms
 {
@@ -32,6 +33,7 @@ namespace BulkCrapUninstaller.Forms
         private FeedbackBox()
         {
             InitializeComponent();
+            this.SetTheme();
 
             if (DesignMode) return;
 

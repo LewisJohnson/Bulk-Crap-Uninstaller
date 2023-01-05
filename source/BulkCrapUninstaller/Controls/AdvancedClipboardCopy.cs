@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using BulkCrapUninstaller.Functions;
+using BulkCrapUninstaller.Themes;
 using UninstallTools;
 
 namespace BulkCrapUninstaller.Controls
@@ -20,6 +21,7 @@ namespace BulkCrapUninstaller.Controls
         public AdvancedClipboardCopy()
         {
             InitializeComponent();
+            this.SetTheme();
 
             comboBoxInsert.Items.AddRange(ClipboardCopyItem.Items.Cast<object>().ToArray());
             comboBoxInsert.SelectedIndex = 0;

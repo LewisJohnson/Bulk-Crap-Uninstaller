@@ -7,6 +7,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using BulkCrapUninstaller.Functions.Ratings;
+using BulkCrapUninstaller.Themes;
 
 namespace BulkCrapUninstaller.Forms
 {
@@ -17,6 +18,7 @@ namespace BulkCrapUninstaller.Forms
         private RatingPopup()
         {
             InitializeComponent();
+            this.SetTheme();
         }
 
         public static UninstallerRating ShowRateDialog(Form owner, string applicationName)

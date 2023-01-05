@@ -6,6 +6,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using BulkCrapUninstaller.Themes;
 using Klocman.Binding.Settings;
 using Klocman.IO;
 
@@ -16,6 +17,7 @@ namespace BulkCrapUninstaller.Controls
         public UninstallationSettings()
         {
             InitializeComponent();
+            this.SetTheme();
         }
 
         protected override void OnLoad(EventArgs e)

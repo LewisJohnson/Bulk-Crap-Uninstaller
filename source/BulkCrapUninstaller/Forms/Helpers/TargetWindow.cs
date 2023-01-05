@@ -13,6 +13,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using BulkCrapUninstaller.Properties;
+using BulkCrapUninstaller.Themes;
 
 namespace BulkCrapUninstaller.Forms
 {
@@ -23,6 +24,7 @@ namespace BulkCrapUninstaller.Forms
         public TargetWindow()
         {
             InitializeComponent();
+            this.SetTheme();
 
             fileTargeter1.DirectoriesSelected += DirectoryTargeterDirectoriesSelected;
             windowTargeter1.WindowSelected += WindowTargeterWindowSelected;

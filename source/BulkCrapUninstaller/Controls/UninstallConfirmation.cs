@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
 using BulkCrapUninstaller.Functions;
+using BulkCrapUninstaller.Themes;
 using UninstallTools.Uninstaller;
 
 namespace BulkCrapUninstaller.Forms
@@ -13,6 +14,7 @@ namespace BulkCrapUninstaller.Forms
         public UninstallConfirmation()
         {
             InitializeComponent();
+            this.SetTheme();
 
             olvColumnEnabled.AspectGetter = rowObject => ((ConfirmationEntry) rowObject).Enabled;
             olvColumnEnabled.AspectPutter = (rowObject, value) => ((ConfirmationEntry) rowObject).Enabled = (bool) value;

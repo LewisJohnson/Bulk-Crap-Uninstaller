@@ -10,6 +10,7 @@ using System.Linq;
 using System.Windows.Forms;
 using BulkCrapUninstaller.Functions;
 using BulkCrapUninstaller.Properties;
+using BulkCrapUninstaller.Themes;
 using Klocman.Extensions;
 using Klocman.Forms.Tools;
 using Klocman.Tools;
@@ -22,6 +23,7 @@ namespace BulkCrapUninstaller.Controls
         public FileTargeter()
         {
             InitializeComponent();
+            this.SetTheme();
         }
 
         private void ProcessFiles(ICollection<string> files)
