@@ -5,6 +5,7 @@ namespace BulkCrapUninstaller.Themes
     public class LightTheme : Theme
     {
         public override Color Background => SystemColors.Control;
-        public override Color Font => SystemColors.ControlText;
+        public override Color Text => SystemColors.ControlText;
+        public override Color Link => Color.FromArgb(255, 0, 0, 255);
     }
 }
